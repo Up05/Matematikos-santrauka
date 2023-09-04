@@ -9,7 +9,3 @@
 
 Taip pat galima atsisiūsti santrauką iš [čia](https://drive.google.com/file/d/1EroKbS_8AE3Rtgtmtxa22SncdRfuQloo/view?usp=sharing), nors tai nepatartina. 
 
-## Kaip naudoti
-
-`.pdf` failai yra naudojami dokumentams, knygoms taip pat kaip Microsoft Word(`.doc`/`.docx`) failai, tik visi, teoriškai, mato tą patį. 
-
