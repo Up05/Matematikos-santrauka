@@ -7,5 +7,5 @@
 2. Paspauskite `ctrl` `shift` `s` arba `...` dešinėje ekrano, tada `Download`
 3. Viskas.
 
-Taip pat galima atsisiūsti santrauką iš [čia](https://drive.google.com/file/d/1EroKbS_8AE3Rtgtmtxa22SncdRfuQloo/view?usp=sharing), nors tai nepatartina. 
+Taip pat galima atsisiūsti santrauką iš [čia](https://drive.google.com/file/d/103II_CmdfuaBbWhc3mDuha72uRWOYYM7/view?usp=sharing), nors tai nepatartina. 
 
