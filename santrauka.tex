@@ -460,7 +460,7 @@ Jos gali būti naudojamos išmatuoti smailųjį kampą stačiajame trikampyje, d
         \cos(\alpha \pm \beta) &= \cos\alpha\cos\beta \mp \sin\alpha\sin\beta \\
         \tg (\alpha \pm \beta) &= \frac{\tg\alpha \pm \tg\beta}{1 \mp \tg\alpha \tg\beta} \\ \\
         \sin(2\alpha) &= \sin(\alpha + \alpha) = 2\sin\alpha\cos\alpha \\
-        \cos(2\alpha) &= \cos(\alpha + \alpha) = \sin^2\alpha + \cos^2\alpha
+        \cos(2\alpha) &= \cos(\alpha + \alpha) = \cos^2\alpha - \sin^2\alpha
     \end{aligned}
     \hspace{20mm}
     \begin{aligned}[c]
@@ -682,10 +682,7 @@ Raskite dydžius, kai A(10; 11), B(7; 7), C(4, 1), D(15, 13): \\
 
 \subsubsection{Daugiau}
 
-$\vec{a} \ne (\vec{a}_x; \vec{a}_y)$, nes $(a_1, a_2 \dots )$ yra sekos sintaksė. 
-Sekos ir vektoriai yra skirtingi, mano supratimu, nes sekos netūrėtų būti laikomos sąrašais, jos dažnai yra tiesiog keli duomenys sudėti į vieną vietą, kaip struktūra. 
-Pavyzdžiui: funkcija: $ma$š$ina()$ gali duoti struktūros Mašina instanciją arba seką: 
-$(\text{„Toyota“}, \text{„Corolla“}, (raudona, juoda \dots), (4; 1,8L; 10; 11.5 \dots) \dots)$.
+$\vec{a} \ne (\vec{a}_x; \vec{a}_y)$, nes $(a_1, a_2 \dots )$ yra sekos sintaksė.
 
 \clearpage
 
@@ -731,8 +728,82 @@ Apskritimas gali būti vaizduojamas kaip lygtis su dviem kintamaisiais:
 
 $\log_p x, p - pagrindas$, \textit{man nebe užteko raidžių :(, $z$ -- ne, $d$ -- negraži, o $\log_e$ yra natūrinis logaritmas(Angl. natural logarithm)}\dots
 
+\section{12 Klasė}
+
+\section{Sekos}
+
+Seka - tai, tiesiog, skaičių, kurie turi savo numerį/indeksą, sąrašas. 
+Seka gali būti išreikšta: 
+\begin{itemize}
+    \item Pagal kiekvieną skaičių: $10, 20, 30, 40 \dots$
+    \item n-ojo nario formule: $a_n = n \cdot 10, n \in \mathbb{N}$
+    \item rekurentiškai: $a_1 = 10, a_{n + 1} = a_n + 10, n \in \mathbb{N}$
+\end{itemize}
+\textit{Sekos indeksas turi būti natūralus skaičius!}
+
+\subsection{Aritmetinė progresija}
+Aritmetinės progresijos yra sekos sekančios: $a_n = a_1 + (n - 1)d$ formulę. \\
+$a_1$ -- pirmas sekos narys, $n$ -- nario numeris, $d$ -- skirtumas, $S$ -- suma.
+\begin{align*}
+    \begin{aligned}
+    a_1 &= a_n - (n - 1)d \\
+    n   &= \frac{a_n - a_1}{d} + 1 \\
+    d   &= \frac{a_n - a_1}{n - 1} = a_{n + 1} - a_n \\
+    \end{aligned}
+    \quad\quad\quad
+    \begin{aligned}
+    S_n &= \frac{a_1 + a_n}{2}n = \frac{2a_1 + (n-1)d}{2} n \\
+    a_{\frac{x + y}{2}} &= \frac{a_{x} + a_{y}}{2},\ (Vidurkis)
+    \end{aligned}
+\end{align*}
+
+\subsection{Geometrinė progresija}
+
+Geometrinės progresijos yra sekos sekančios: $b_n = b_1 q^{n - 1}$ formulę. \\
+$b_1$ -- pirmas sekos narys, $n$ -- nario numeris, $q$ -- vardiklis, $S$ -- suma.
+\begin{align*}
+    \begin{aligned}
+    b_1 &= b_n : q^{n - 1} \\
+    n   &= \log_q{(\frac{b_n}{b_1} + q)} \\
+    q   &= (\frac{b_1}{b_n})^{n - 1} = \frac{b_{n + 1}}{b_n} \\
+    \end{aligned}
+    \quad\quad\quad
+    \begin{aligned}
+    S_n &= \frac{b_1 - b_n q}{1 - q} = \frac{b_1(1 - q^n)}{1 - q} \\
+    S   &= \frac{b_1}{1 - q} \\
+    a_{\frac{x + y}{2}} &= \sqrt{a_{x} + a_{y}},\ (Vidurkis)
+    \end{aligned}
+\end{align*}
+
+
+\subsection{Mišrių progresijų uždaviniai}
+\textcolor{red}{Sėkmės.}
+
+\subsection{Daugiau}
+Kiek mačiau, Amerikoje beveik visad Aritmetinė ir Geometrinė progresijos sutrumpinamos į $AP$ ir $GP$.
+
+\section{Nelygybės}
+\subsection{Tiesinės nelygybės}
+\subsection{Kvadratinės nelygybės}
+\subsection{Trupmeninės nelygybės}
+\subsection{Rodiklinės nelygybės}
+\subsection{Logaritminės nelygybės}
+\subsection{Modulinės nelygybės}
+\subsection{Trigonometrinės nelygybės}
+
+
 \section{Dar daugiau}
 
+\subsection{Įsivaizduojamieji skaičiai($\mathbb{C}$):}
+Šie skaičiai turi tikrają ir įsivaizduojamają dalis. Atrodo taip: $-12 + 2i$.
+Tikroji dalis yra paprastas skačiius, be vieneto, kol įsivaizduojamoji turi $i$. Jei jums patinka, galite $i$ laikyti: $obuolys$ arba $knyga$... \\
+Nors, svarbiausia: $i = \sqrt{-1}$ ir $i^2 = -1$. \\
+Šie skaičiai taip pat veikia kaip plokštumos(2D) vektoriai, su kuriais daug lengviau daryti algebrą. Galite laikyti tikrają skaičiaus dalį $\vec{a}_x$ komponentu ir netrikrają $\vec{a}_y$ komponentu. \\
+Beje, $\vec{i}(1, 0, 0 \dots )$ ir $\vec{j}(0, 1, 0 \dots)$ tai vienetiniai vektoriai!
+
+
+
+\subsection{Sudėties apibrėžimas:}
 \begin{math}
     3^2 = 3 * 3 = 3 + 3 + 3 = ? \\
     \\
