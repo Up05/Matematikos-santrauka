@@ -4,6 +4,7 @@
 \usepackage[colorlinks, urlcolor=blue, linkcolor=black]{hyperref}
 \usepackage[inline]{enumitem}
 \usepackage{amsmath}
+\usepackage{amstext}
 \usepackage{amsfonts}
 \usepackage{ulem}
 \usepackage[a4paper, total={400pt, 10in}]{geometry}
@@ -12,11 +13,12 @@
 \usepackage{textcomp}
 \usepackage{gensymb}
 \usepackage{wrapfig}
-\usepackage{svg}
-\usepackage{multimedia}
+% \usepackage{svg}
+% \usepackage{multimedia}
 \usepackage{esvect}
 \usepackage[export]{adjustbox}
 \usepackage{mathtools}  
+\usepackage{amssymb}
 \mathtoolsset{showonlyrefs}
 
 \newenvironment{exercises}{\begin{enumerate*}[label=\alph*), itemjoin=\qquad]}{\end{enumerate*}}
@@ -29,6 +31,9 @@
 \DeclareMathOperator{\jei}{\ jei\ }
 \DeclareMathOperator{\ir}{\ ir\ }
 \DeclareMathOperator{\arba}{\ arba\ }
+
+\DeclareMathOperator{\half}{\frac{1}{2}}
+\DeclareMathOperator{\third}{\frac{1}{3}}
 
 \graphicspath{ {./assets/} }
 % \title{Matematikos formulės}
@@ -46,99 +51,7 @@
 
 \section{Būtina žinoti}
 
-\subsection{Lygtys su vienu nežinomuoju}
-$2x = x + 4$, $2x - x = 4$, $x = 4$ \\
-Lygtyse, kai kintamasis pakeltas pirmuoju laipsnio rodikliu, kintamieji ir skaičiai turėtų būti skirtingose $=$ pusėse:
-$x + 2 - 4x + 10 = 0$, $-3x = -12$, \\
-Kitose lygtyse, kai kintamojo laipsnis $ > 1$, lygtį reikia prilyginti $0$.
-\begin{equation}    
-\begin{aligned}
-    & (x - 4)^2 = 12 \\
-    & x^2 - 8x + 16 = 12 \\
-    & x^2 - 8x + 4 = 0 \dots
-\end{aligned}
-\qquad
-\begin{aligned}
-    & x(x - 4) = 0 \\
-    & x = 0\arba x - 4 = 0 \\
-    & x = 0\arba x = 4    
-\end{aligned}
-\qquad
-\begin{aligned}    
-    % & (x + 3)(x + 4) = 0 \\
-    % & x + 3 = 0\arba x + 4 = 0 \\
-    % & x = -3\arba x = -4
-    & x^4 + 81 = 0 \\
-    & \sqrt[4]{x^4} = \sqrt[4]{81} \\
-    & x = 3 \arba  x = -3
-\end{aligned}
-\end{equation}
-
-\begin{equation}
-    ax^2 + bx + c = 0, \\
-    D = b^2 - 4ac,     \\
-    x = \frac{-b \pm \sqrt{D}}{2a}
-\end{equation}
-
-
-\section{Skaičių aibės}
-Aibė -- nesikartojančių daiktų (dažniausia skaičių) rinkinys.
-\begin{equation}
-\{1; 2; -3; 3.5; \pi\}
-\end{equation}
-
-\begin{table}[h]
-\begin{tabular}{c|l|l}
-    
-    Simb. & Reikšmė                                 & Aibės nariai/elementai \\
-    \hline
-    $\mathbb{N}$ & Visų natūraliųjų skaičių aibė    & $\{1; 2; 32768\:\dots\}$ \\
-    $\mathbb{Z}$ & Visų sveikųjų skaičių aibė       & $\{-1; 0; 1\:\dots\}$ \\
-    $\mathbb{Q}$ & Visų racionaliųjų skaičių aibė   & $\{\frac{1}{4}; -\frac{1}{16}\:\dots\}$ \\
-    $\mathbb{I}$ & Visų iracionaliųjų skaičių aibė  & $\{-\pi; \sqrt{2}\:\dots\}$ \\
-    $\mathbb{R}$ & Visų realiųjų skaičių aibė       & $\mathbb{Q} \cup \mathbb{I}$ \\
-                 & Visų pirminių skaičių aibė       & $\{2; 3; 5; 7; 13 \dots \}$ \\
-                 & Visų sudėtinių skaičių aibė      & $\{4; 6; 8; 9; 10\dots\}$ \\
-    $\phi$       & Tuščia aibė                      &
-\end{tabular}
-\caption[Dažnai naudojamos aibės]{Dažnai naudojamos aibės}
-\label{table:data}
-\end{table} 
-
-\begin{table}[h]
-    \begin{tabular}{c|l|l}
-        
-        Simb. & Reikšmė                             & Pavyzdys \textit{(-iai)} \\
-        \hline
-        $\cup$      & Aibių sąjunga                 & $\{1; 2\} \cup \{2; 3\} = \{1; 2; 3\}$ \\
-        $\cap$      & Aibių sankirta                & $\{1; 2\} \cap \{2; 3\} = \{2\}$ \\
-        $\setminus$ & linktarget{Aibių skirtumas}   & $\{1; 2\} \setminus \{2; 3\} = \{1\}$ \\
-        $\subset$   & Poaibis                       & $\{1; 2\} \cup \{2; 3\} = \{1; 2; 3\}$ \\
-        $\in$       & Priklauso                     & $2 \in \{1; 2; 3\}$, $\{1; 2\} \in \{\{1; 2\}; 3\}$ \\
-    \end{tabular}
-    \caption[Veiksmai su aibėmis]{Veiksmai su aibėmis}
-\end{table} 
-
-\begin{align}
-    \mathbb{N} \in \mathbb{Z} \in \mathbb{Q} & \in \mathbb{R} \in \dots \\
-    \mathbb{I} & \in \mathbb{R} \\
-    \mathbb{Q} \cup \mathbb{I} & = \mathbb{R}
-\end{align}
-
-\subsection{Pratimai}
-
-Kokiai mažiausiai, iš čia išvardintų, aibių \uwave{priklauso}: \\
-\begin{exercises}
-    \item $5$
-    \item $1.3$
-    \item $\{1; 2; 2\pi\}$
-    \item $\left[0; 1\right]$ 
-    \item $\frac{1}{x}, x \in \mathbb{N}$ 
-\end{exercises} 
-
-\subsection{Daugiau}
-
-\href {https://en.wikipedia.org/wiki/Set-theoretic_definition_of_natural_numbers}{[EN] Natūraliųjų skaičių apibrėžimas aibių/setų teorijoje.}
+% \input{sections/butina_zinoti.tex}
 
 \section{Dešimtainės begalinės periodinės trupmenos} 
 $1,36(24) = 1,3624242424242424 \dots$ arba \\
@@ -165,7 +78,7 @@ $1,36(24) = 1,3624242424242424 \dots$ arba \\
 
 \subsection{Pratimai}
 
-Paverskite šias dešimtaines trupmenas į paprastąsias: \\
+Paverskite šias dešimtaines trupmenas paprastosimis: \\
 \begin{exercises}
     \item $2,5      $
     \item $9,(9)    $
@@ -187,54 +100,17 @@ $0$ sveikų, $\frac{9}{10}$ periodu yra lygu $1$:
     0,(9) = 1, nes{:}\; 9,(9) - 0,(9) = 10x - 1x;\; 9x = 9;\; x = 1
 \end{math}
 
-
 \section{Logaritmai}
 
-Logaritmas duoda laipsnio rodiklį, kuriuo pagrindas turėtų būti pakeltas, kad gautusi logaritmo argumentas.
-$\log_a b = c,\;a^c = b$.
-
-\begin{math}
-    \log_a b = c, jei\; a > 0, a \ne 1, b > 0
-\end{math}
-
-\begin{itemize}
-    \item $a \ne 1, nes \log_1 x = c,\,x = 1^c = 1,\, c \in \mathbb{R}\; 
-    (c = 1 = a, c = 2 = a, c = -3 = a \dots)$
-    \item $a > 0, nes \log_{-2} x = c, x = (-2)^c,\,jei\;c = \frac{a}{b}\;ir\;b - lyginis,\;o\;a - ne{:}\; (-2)^\frac{a}{b} = \phi,\\ \hspace*{10mm} pvz{:}\; (-2)^\frac{1}{2} = \sqrt{-2}, taigi{:}\;\log_{-2} \phi = \frac{1}{2}, nors{:}\; \log_{-2} 4 = 2$
-    \item $b > 0, jei\;a > 0\;arba\;b - lyginis.$
-\end{itemize}
-
-\subsection{Logaritmų savybės}
-\begin{itemize}
-    \item $\log_a(xy) = \log_a x + \log_a y$
-    \item $\log_a(\frac{x}{y}) = \log_a x - \log_a y$
-    \item $\log_a(x^k) = k\log_a x$
-    \item $\log_a b = \frac{\log_c b}{\log_c a}$\qquad $(\log_a \rightarrow \log_c)$
-    \item $a^{\log_a b} = b$
-\end{itemize}
-
-\subsection{Pratimai}
-
-\begin{exercises}
-    \item $\log_2(8)            $
-    \item $\log_4(64)           $
-    \item $\log_3\,x = 3        $
-    \item $\log_2 6 + \log_2 4  $
-    \item $8\log_4 2           $
-    \item $\log_4(x) + 1 = 3    $
-\end{exercises} 
-
-\subsection{Daugiau}
-
-$\log_{10} x$ arba $\lg x$ gali duoti argumento skaitmenų skaičių: $\lfloor log_{10} x \rfloor + 1$. \\
-$\frac{log_e x}{log_e a} = log_a x$ duodą log su norimu pagrindu. $\frac{log_e 64}{log_e 4} = 3$.
+% \input{sections/logaritmai.tex}
 
 \section{Šaknys}
+
 \begin{math}
     \sqrt{a} * \sqrt{b} = \sqrt{a * b} \\
     (\sqrt{a})^n = \sqrt{a^n} \\
     \sqrt[n]{\sqrt[k]{a}} = \sqrt[n * k]{a} \\
-    \sqrt[2n]{a} = |a| = \{a; -a\}, \sqrt[2n + 1]{a} = a \\
+    \sqrt[2n]{a^{2n}} = |a|, \sqrt[2n + 1]{a^{2n + 1}} = a \\
     a^{\frac{n}{k}} = \sqrt[k]{a^n}
 \end{math}
 
@@ -394,208 +270,9 @@ Lygtis su dviem nežinomaisiais galima išspręsti grafiškai \textit{(bet taip 
 \end{equation}
 \textit{Čia sudėties būdas irgi galimas, tik jis veikia daug rečiau. Dažnai gali būti naudojamas mišrus būdas, dvi lygtis sudedame ir rezultatą (keitimo būdu) įstatome į trečią.}
 
-
-
 \section{Trikampiai}
 
-\subsection{Radianai}
-Radianas - kampo dydžio matavimo vienetas. \textbf{Gali} būti žymimas: $rad$.
-
-\begin{math} \\
-    1rad = \frac{180}{pi}\degree \approx 57 \degree \\
-    1\degree = \frac{pi}{180}
-\end{math}
-
-\subsection{Trigonometrinės funkcijos}
-Trigonometrinės funkcijos yra $\sin$, $\cos$, $\tg$, $\ctg$, $\arcsin$ ir daugiau\dots
-Jos gali būti naudojamos išmatuoti smailųjį kampą stačiajame trikampyje, daugelyje formulių ir t.t\dots
-
-\subsection{Statieji trikampiai}
-{
-\begin{wrapfigure}{l}{0.4\textwidth}
-\caption{\textit{Iliustracijos -- tiek reikalingos, kiek nuobodžios daryti.}}
-\includegraphics[scale=0.5]{right_triangle.png}
-\end{wrapfigure}
-
-\begin{equation*} \\
-    \begin{aligned}[c]
-        \sin \alpha &= \frac{a}{c} \\
-        \cos \alpha &= \frac{b}{c} \\
-        \tg  \alpha &= \frac{a}{b} \\
-        \ctg \alpha &= \frac{b}{a}
-    \end{aligned}
-    \hspace{10mm}
-    \begin{aligned}[c]
-        c^2 &= a^2 + b^2 \\
-        S &= \frac{ab}{2}
-    \end{aligned}
-\end{equation*}
-}
-
-\clearpage
-\subsection{Įvairiakraščiai trikampiai}
-
-\includegraphics[scale=0.5]{icocele_triangle.png}
-
-\begin{equation*}
-    \begin{aligned}[c]
-        180\degree &= \alpha + \beta + \gamma \\
-        \frac{a}{\sin \alpha} &= \frac{b}{\sin \beta} = \frac{c}{\sin \gamma} \\
-        a^2 &= b^2 + c^2 - 2\, b\, c\,\cos \alpha \\
-        S &= \frac{a\,b}{2} \cdot \sin \gamma
-    \end{aligned}
-    \hspace{40mm}
-    \begin{aligned}[c]
-        \textit{Sinuso\ teorema} \\
-        \textit{Kosinuso\ teorema} \\
-    \end{aligned}
-\end{equation*}
-
-
-\subsection{Trigonometrinės formulės}
-
-\begin{equation*} \\
-    \begin{aligned}[c]
-        \sin(\alpha \pm \beta) &= \sin\alpha\cos\beta \pm \sin\beta\cos\alpha \\
-        \cos(\alpha \pm \beta) &= \cos\alpha\cos\beta \mp \sin\alpha\sin\beta \\
-        \tg (\alpha \pm \beta) &= \frac{\tg\alpha \pm \tg\beta}{1 \mp \tg\alpha \tg\beta} \\ \\
-        \sin(2\alpha) &= \sin(\alpha + \alpha) = 2\sin\alpha\cos\alpha \\
-        \cos(2\alpha) &= \cos(\alpha + \alpha) = \cos^2\alpha - \sin^2\alpha
-    \end{aligned}
-    \hspace{20mm}
-    \begin{aligned}[c]
-        \sin{\alpha}^2 + \cos{\alpha}^2 &= 1 \\
-        \tg \alpha \cdot \ctg \alpha &= 1 \\
-        \tg \alpha &= \frac{\sin \alpha}{\cos \alpha} \\
-        \ctg \alpha &= \frac{1}{\tg \alpha} \\
-        1 + \tg^2 \alpha &= \frac{1}{\cos^2 \alpha} \\  
-        1 + \ctg^2 \alpha &= \frac{1}{\sin^2 \alpha} \\  
-    \end{aligned}
-\end{equation*}
-
-\subsubsection{Pratimai}
-
-\begin{exercises} \\
-    \item $\ctg 30\degree               $
-    \item $\ctg(45\degree + 45\degree)  $
-    \item $\sin 75\degree               $
-    \item $\cos( \alpha - 90\degree )   $
-    \item $\tg \alpha\ ((\tg\alpha\ (\tg \alpha + \ctg \alpha))^{-1}\ - 1) $ 
-\end{exercises} 
-
-\subsubsection{Daugiau}
-
-\begin{math}
-    \sin(10\cdot 30\degree) = \sin(30\degree + 9 \cdot 30\degree) = \\
-    \sin 30\degree \cos 30\degree + \sin(9 \cdot 30\degree)\cos(9 \cot 30\degree) = \\
-    \frac{\sqrt{3}}{4} + \sin(30\degree + 8 \cdot 30\degree)\cos(30\degree + 8 \cdot 30\degree) = ... \\ 
-    \\
-    \sin(10 \cdot 30\degree) = \sin(300\degree) \Rightarrow 
-    \sin(300\degree - 270\degree) \Rightarrow -\cos(30\degree) = -\frac{\sqrt{3}}{2}
-\end{math} \\
-
-\begin{math} \\
-    \tg(\alpha + \beta) = \frac{\sin(\alpha + \beta)}{\cos(\alpha + \beta)}
-\end{math}
-
-\subsection{Redukcija}
-
-Redukcija yra naudojama norint gauti tikslią $\sin, \cos, \tg$ ar $\ctg$ reikšmę iš lentelės (kurioje visos reikšmes yra nuo $0$ iki $90\degree).$ \\
-
-Trig. funkcijų periodai$(T)$: $T_{sin} = 360\degree, T_{cos} = 360\degree, T_{tg} = 180\degree, T_{\ctg} = 180\degree $
-
-$\sin(\alpha + 90\degree) = \cos\alpha$
-\begin{enumerate}
-    \item Jei $\alpha > T$, \\
-        $\alpha \Rightarrow \alpha \mod T$, \textit{arba atimti $T$ iš $\alpha$, kol $\alpha < T$}
-    \item Jei $\alpha \ge 90\degree$, žiūrėti pagal ketvirčius: \\
-        \includegraphics[scale=0.25]{assets/reduction.png} 
-    \item Jei $\alpha \le 90\degree$, \\
-        tikslią trig. funkcijos reikšmę galima rasti lentelėje.
-
-\end{enumerate}
-
-\subsubsection{Pratimai}
-
-\begin{exercises}
-    \item $\sin 30\degree         $
-    \item $\cos 30\degree         $
-    \item $\sin 270\degree        $
-    \item $\tg  300\degree        $ 
-    \item $\ctg 120\degree        $
-    \item $\sin 720\degree n, n \in \mathbb{Z} $
-    \item $\sin(-45\degree) $
-\end{exercises} 
-
-
-\subsubsection{Daugiau}
-
-\begin{table}[h]
-    \begin{tabular}{|c|ccccccccc|} 
-        % There has got to be a better way to do this, but I don't care right now
-        \hline
-        $\alpha,\,\degree$ & 0 & 30 & 45 & 60 & 90 & 120 & 135 & 150 & 180 \\ 
-        \hline
-        $\sin \alpha$ & 0 & $\frac{1}{2}$ & $\frac{\sqrt{2}}{2}$ & $\frac{\sqrt{3}}{2}$ & 1 
-                      & $\frac{\sqrt{3}}{2}$ & $\frac{\sqrt{2}}{2}$ & $\frac{1}{2}$ & 0 \\
-        \hline
-    \end{tabular}
-    \\ \\ \\
-    \begin{tabular}{|c|cccccccc|}
-        \hline
-        $\alpha,\,\degree$ & 210 & 225 & 240 & 270 & 300 & 330 & 345 & 360 \\ 
-        \hline
-        $\sin \alpha$ & $-\frac{1}{2}$ & $-\frac{\sqrt{2}}{2}$ & $-\frac{\sqrt{3}}{2}$ & -1
-                      & $-\frac{\sqrt{3}}{2}$ & $-\frac{\sqrt{2}}{2}$ & $-\frac{1}{2}$ & 0 \\
-        \hline
-    \end{tabular}
-    \caption{Pratęsta $\sin \alpha$ lentelė}
-\end{table}
-
-
-\subsection{Atvirkštinės trigonometrinės funkcijos (arc-funkcijos).}
-
-\begin{equation}
-    \begin{aligned}[c]
-        \sin(\arcsin a) &= a, & \arcsin x &= y,\,kai\ -1 \le x \le 1\ ir\ y \in \left[ -\frac{\pi}{2}; \frac{\pi}{2}\right] \\
-        \cos(\arccos a) &= a, & \arccos x &= y,\,kai\ -1 \le x \le 1\ ir\ y \in \left[0;\pi\right] \\
-        \tg (\arctg  a) &= a, & \arctg  x &= y,\,kai\ y \in \left[ -\frac{\pi}{2}; \frac{\pi}{2}\right]\\
-        \ctg(\arcctg a) &= a, & \arcctg x &= y,\,kai\ y \in \left[0;\pi\right]
-    \end{aligned}
-\end{equation}
-
-\begin{equation}
-    \begin{aligned}[c]
-        \sin x &= y, & x &= (-1)^n + \arcsin y + \pi{n}, n \in \mathbb{Z} \\
-        \cos x &= y, & x &= \pm \arccos y + 2\pi{n}, n \in \mathbb{Z} \\
-        \tg  x &= y, & x &= \arctg y + \pi{n}, n \in \mathbb{Z} \\
-        \ctg x &= y, & x &= \arcctg y + \pi{n}, n \in \mathbb{Z} \\
-    \end{aligned}
-\end{equation}
-
-\begin{equation}
-    \left.
-    \begin{aligned}[c]
-        \sin x &= -1, & x &= -\frac{\pi}{2} &+\ 2\pi{n} \\
-        \sin x &=  0, & x &=                &    \pi{n} \\
-        \sin x &=  1, & x &= +\frac{\pi}{2} &+\ 2\pi{n}
-    \end{aligned}
-    \hspace {15mm}
-    \begin{aligned}[c]
-        \cos x &= -1, & x &= \pi            &+\ 2\pi{n} \\
-        \cos x &=  0, & x &= \frac{\pi}{2}  &    \pi{n} \\
-        \cos x &=  1, & x &=                &+\ 2\pi{n}
-    \end{aligned}
-    \hspace{5mm}
-    \right\}
-    n \in \mathbb{Z}
-\end{equation}
-
-\subsubsection{Daugiau}
-
-$\arcsin x = y$, $y \in [-\frac{\pi}{2}; \frac{\pi}{2}]$, o ne, pavyzdžiui: $y \in [-\pi; \pi]$, nes y tūrėtų 2 atsakymus, būtų aibė $y = \{x_1; x_2\}$.
-
-% \includegraphics[scale=0.5]{assets/arcsin_restriction_reason.png} TODO, oops
+% \input{sections/trikampiai.tex}
 
 \section{Kitos Figūros}
 
@@ -603,88 +280,7 @@ $\arcsin x = y$, $y \in [-\frac{\pi}{2}; \frac{\pi}{2}]$, o ne, pavyzdžiui: $y 
 
 \section{Vektoriai}
 
-Skaliaras - vienas skaičius. \textit{Angl. scalar, scale} \\
-Vektorius - skaliarų sąrašas, pavyzdžiui: $\{x; y; z; 40, 50\}$. Vektorius galima pavaizduoti plokštumoje naudojant atkarpą.
-
-\begin{table}[h]
-    \begin{tabular}{rll}
-        Skaliaras & $a$ \\
-        Vektorius & $\{a_1; a_2 \dots a_n\}$\\
-        Matrica   & $\begin{bmatrix}
-            a_1 & a_2 & \dots & a_n \\
-            b_1 & b_2 & \dots & b_n \\
-            \dots & \dots & \dots & \dots
-        \end{bmatrix}$ \\
-        \dots & \dots
-    \end{tabular}
-    \hspace{40mm}
-    \begin{tabular}{rc}
-        Ašis & Pavadinimas \\ \hline
-        OX & Abscisių ašis \\
-        OY & Ordinačių ašis \\
-        OZ & Aplikačių ašis
-    \end{tabular}
-\end{table}
-Mes naudojame vektorius, kurie turi: $\{x; y\}$ arba $\{x; y; z\}$. Pavyzdžiui: $\vec{AB}(3;\,4)$.
-
-\begin{wrapfigure}{l}{0.4\textwidth}
-\includegraphics[scale=0.4]{vector_basics.png}
-\end{wrapfigure}
-
-\begin{equation}
-    \hspace{10mm}
-    \begin{aligned}
-        \vec{AB} & (x_2 - x_1; y_2 - y_1; z_2 - z_1) \\
-        \vec{i} & (1, 0, 0), \vec{j}(0, 1, 0), \vec{k}(0, 0, 1) \\
-        \vec{AB} &= (x_2 - x_1) \cdot \vec{i} + (y_2 - y_1) * \vec{j} + (z_2 - z_1) \cdot \vec{k} \\
-        |\vec{AB}| &= \sqrt{x^2 + y^2 + z^2} \\
-        \vec{AB} + \vec{BC} &= \vec{AC} \ne \vec{CA} \\
-        \vec{AB} - \vec{BC} &= -\vec{AC} = \vec{CA} \\
-        \vec{a} \cdot n &= \vec{a} + \vec{a} + \dots \}\ n \text{ kartų} \\
-        \vec{a} \cdot \vec{b} &= |\vec{a}| \cdot |\vec{b}| \cdot \cos{\widehat{(\vec{a}; \vec{b})}} \\
-        \vec{a} \cdot \vec{b} &= \vec{a}_x \cdot \vec{b}_x + \vec{a}_y \cdot \vec{b}_y \\
-        \vec{a} \cdot \vec{b} &= \frac{\vec{a} \cdot \vec{b}}{|\vec{a}||\vec{b}|}
-    \end{aligned}
-\end{equation}
-
-\begin{table}[h]
-    \begin{tabular}{rcl}
-        Vektoriaus tipas& Pavyzdžiai & Apibrėžimas \\ \hline
-        Kolinearieji    & \includegraphics*[scale=0.25]{colinear_vectors.png} & $\vec{a}_x : \vec{b}_y = \vec{a}_x : \vec{b}_x$ \\
-        Vienkrypčiai    & \includegraphics*[scale=0.25]{one-way_vectors.png} & $\vec{a} \uparrow \uparrow \vec{b}, \vec{a} \cdot m = \vec{b}, m > 0$  \\
-        Priešpriešiniai & \includegraphics*[scale=0.25]{opposite-facing_vectors.png} & $\vec{a} \uparrow \downarrow \vec{b}, \vec{a} \cdot m = \vec{b}, m < 0$ \\
-        Statmeni        & \includegraphics*[scale=0.25]{perpendicular_vectors.png} & $\vec{a} \perp \vec{b}, \;\vec{a} \cdot \vec{b} = 0 $ \\
-        Lygieji         & \includegraphics*[scale=0.25]{equal_vectors.png} & $\vec{a} = \vec{b}$ \\
-        Priešingieji    & \includegraphics*[scale=0.25]{opposite_vectors.png} & $\vec{a} = -\vec{b}$ \\
-        Nulinis         & $\vec{AA}$ & $|\vec{a}| = 0$
-    \end{tabular}
-\end{table}
-
-\clearpage
-
-\subsection{Vektorių sudėtis}
-\includegraphics{assets/vector_addition.png}
-
-\subsubsection{Pratimai}
-
-Išreiškite vektorius, kuriuos reikėtų sudėti, kad gautumėte $\vec{AZ}$
-
-\includegraphics[max width=\textwidth]{assets/vector_exercise.png}
-Raskite dydžius, kai A(10; 11), B(7; 7), C(4, 1), D(15, 13): \\
-\begin{exercises}
-    \item $|\vec{AB}|                           $
-    \item $\vec{AB} + \vec{CD}                  $
-    \item $\vec{AD} \cdot 2                     $
-    \item $\vec{AB} \cdot \vec{CD}              $
-    \item $\frac{\vec{AB}}{\vec{CD}}            $
-    \item $\cos \widehat{(\vec{AB}, \vec{DC})}  $
-\end{exercises}
-
-\subsubsection{Daugiau}
-
-$\vec{a} \ne (\vec{a}_x; \vec{a}_y)$, nes $(a_1, a_2 \dots )$ yra sekos sintaksė.
-
-\clearpage
+% \input{sections/vektoriai.tex}
 
 \section{Geometrija}
 
@@ -782,18 +378,48 @@ $b_1$ -- pirmas sekos narys, $n$ -- nario numeris, $q$ -- vardiklis, $S$ -- suma
 \subsection{Daugiau}
 Kiek mačiau, Amerikoje beveik visad Aritmetinė ir Geometrinė progresijos sutrumpinamos į $AP$ ir $GP$.
 
+\pagebreak
+
 \section{Nelygybės}
-\subsection{Tiesinės nelygybės}
-\subsection{Kvadratinės nelygybės}
-\subsection{Trupmeninės nelygybės}
-\subsection{Rodiklinės nelygybės}
-\subsection{Logaritminės nelygybės}
-\subsection{Modulinės nelygybės}
-\subsection{Trigonometrinės nelygybės}
+
+% \input{sections/nelygybes.tex}
+
+\section{Išvestinės}
+
+\input{sections/isvestines.tex}
+
+\section{Integralai}
+
+Integralai dažniausia naudojami gauti plotą po tarp kelių funkcijų. 
+
+\subsection{Pirmykštė funkcija}
+
+Taip kaip sudėtis yra atvirkščia atimčiai, skačiaus kėlimas laipsniu atvirkščias šaknies traukimui ar sin yra atvirkščias arcsin, apie pirmykštę funkciją galima mąstyti kaip atvirkščią išvestinėms. 
+
+\begin{center}
+    $\begin{array}{ l | l | l }
+        \text{Pirmykštė funkcija} F(x) & \text{Paprasta funkcija} f(x) & \text{Funkcijos išvestinė} f^\prime(x) \\ \hline
+        x + C                       & 1           & 0                 \\
+        x^2 : 2 + C                 & x           & 1                 \\
+        x^3 : 3 + C                 & x^2         & 2x                \\
+        2x^2 + 5x + C               & 4x + 5      & 4                 \\
+        4^x : \ln 4                 & 4^x         & 4^x \cdot \ln 4   \\
+        -\cos x                     & \sin x      & \cos x            \\
+        (\log_4x)x-\frac{x}{\ln4}+C & \log_4 x    & 1 : (x \cdot \ln 4) 
+    \end{array}$
+\end{center}
+
+% \section{Geometrija (erdvėje)}
+
+% \subsection{Pagrindai}
+
+\section{Tikimybės}
+
+\input{sections/tikimybes.tex}
+
 
 
 \section{Dar daugiau}
-
 \subsection{Įsivaizduojamieji skaičiai($\mathbb{C}$):}
 Šie skaičiai turi tikrają ir įsivaizduojamają dalis. Atrodo taip: $-12 + 2i$.
 Tikroji dalis yra paprastas skačiius, be vieneto, kol įsivaizduojamoji turi $i$. Jei jums patinka, galite $i$ laikyti: $obuolys$ arba $knyga$... \\
@@ -816,6 +442,7 @@ Beje, $\vec{i}(1, 0, 0 \dots )$ ir $\vec{j}(0, 1, 0 \dots)$ tai vienetiniai vekt
 
 % Todo:
 %   - Probability?
-%   - 
-%
-%
+%   - Matrices
+%   - Vector extras
+%   - Derivatives
+%   - Integrals
